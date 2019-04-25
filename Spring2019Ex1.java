@@ -1,13 +1,13 @@
 public class Spring2019Ex1 {
 
     static String text = "";
-    static Character empty = '\0';
+    static Character empty = '\u200b';
     static char[] t = text.toCharArray();
 
     public static void main(String[] args){
-        for(int i=0; i<t.length-1; i++) {
+        for(int i=0; i<t.length-1; i++){
             if(cur(i)){
-                if(right(i)) {
+                if(right(i)){
                     t[i] = empty;
                     if(i == 0){
                         t[1] = empty;
@@ -17,7 +17,7 @@ public class Spring2019Ex1 {
                     }
                 }
             }else{
-                if(right(i) && i==t.length-2) {
+                if(right(i) && i==t.length-2){
                     t[i+1] = empty;
                 }
             }
