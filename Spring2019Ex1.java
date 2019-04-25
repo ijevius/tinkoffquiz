@@ -1,20 +1,36 @@
-import java.util.Scanner;
-
 public class Spring2019Ex1 {
 
-    static Scanner sc = new Scanner(System.in);
-    static String message;
+    static String text = "";
+    static Character empty = '\0';
+    static char[] t = text.toCharArray();
 
     public static void main(String[] args){
-        message = sc.nextLine();
-        message = message.replaceAll(" +", " ");
-        if(message.startsWith(" ")){
-            message = message.substring(1, message.length());
+        for(int i=0; i<t.length-1; i++) {
+            if(cur(i)){
+                if(right(i)) {
+                    t[i] = empty;
+                    if(i == 0){
+                        t[1] = empty;
+                    }
+                    if(i+1 == t.length-1 || t[i+1] == ' '){
+                        t[t.length-1] = empty;
+                    }
+                }
+            }
         }
-        if(message.endsWith(" ")){
-            message = message.substring(0, message.length()-1);
-        }
-        System.out.println(message);
+        System.out.println(new String(t));
+    }
+
+    static boolean right(int pos){        
+        if(pos<=t.length-2)
+            return t[pos+1] == ' ';
+        else throw new ArrayIndexOutOfBoundsException();
+    }
+
+    static boolean cur(int pos){
+        if(pos<=t.length-1)
+            return t[pos] == ' ';
+        else throw new ArrayIndexOutOfBoundsException();
     }
 
 }
