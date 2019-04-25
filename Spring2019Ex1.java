@@ -11,10 +11,14 @@ public class Spring2019Ex1 {
                     t[i] = empty;
                     if(i == 0){
                         t[1] = empty;
-                    }
-                    if(i+1 == t.length-1 || t[i+1] == ' '){
+                    }else if(i == t.length-2){
+                        t[t.length-2] = empty;
                         t[t.length-1] = empty;
                     }
+                }
+            }else{
+                if(right(i) && i==t.length-2) {
+                    t[i+1] = empty;
                 }
             }
         }
