@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SummerIntershipEx1 {
+public class SummerIntership2019Ex1 {
 
     static int n;
     static double x, y;
