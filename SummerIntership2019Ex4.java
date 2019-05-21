@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SummerIntershipEx4 {
+public class SummerIntership2019Ex4 {
 
     static Scanner sc = new Scanner(System.in);
     static long N; static long d = 2;
