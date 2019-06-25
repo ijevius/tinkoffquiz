@@ -27,6 +27,8 @@ public class SummerIntership2019Ex5 {
         }
         if(b && d && s){
             System.out.println("YES");
+        }else{
+            System.out.println("NO");
         }
     }
 
