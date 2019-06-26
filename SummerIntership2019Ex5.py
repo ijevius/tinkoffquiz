@@ -8,9 +8,9 @@ if len(password) < 8:
     sys.exit()
 else:
     for c in password:
-        if ord(c) in range(65, 90):
+        if ord(c) in range(65, 90+1):
             b = True
-        elif ord(c) in range(97, 122):
+        elif ord(c) in range(97, 122+1):
             s = True
         elif c.isdigit():
             d = True
