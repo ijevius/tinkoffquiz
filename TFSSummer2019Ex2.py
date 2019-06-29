@@ -13,10 +13,10 @@ else:
     odd = int(l / 2)
     even = 0
     while odd != l:
-        orig = orig + str(s[odd])
+        orig += str(s[odd])
         if odd != l-1:
             orig += str(s[even])
         even += 1
         odd += 1
-        
+
 print(orig)
